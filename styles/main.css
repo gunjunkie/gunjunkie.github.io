@@ -1,0 +1,414 @@
+@font-face {
+    font-family: "gotham";
+    src: url("../gotham/gotham/Gotham-Book.otf") format("opentype");
+}
+
+body{
+    background-color: rgb(20,23,25);
+}
+
+.navLogo{
+    position: absolute;
+    z-index: 12;
+    left: 50%;
+    top: 16vw;
+    width: 10vw;
+    height: auto;
+    transform: translate(-50%, 0);
+}
+.navBG{
+    position: relative;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+}
+
+.navbar{
+    position: absolute;
+    top: 4.0vw;
+    z-index: 11;
+    background-color: rgba(255,255,255,0);
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.navbar > ul{
+    padding-left: 0;
+    margin: 0;
+    z-index: 6;
+    display: table;
+    width: 100%;
+    height: auto;
+    list-style: none;
+}
+
+.navbar > ul > li{
+    z-index: 6;
+    display: table-cell;
+    text-align: center;
+    width: 20%;
+    padding-top: 0;
+}
+
+.navbarLink{
+    font-family: "gotham";
+    font-size: 2.3vw;
+}
+
+.navbar > ul > li > a:hover{
+    text-decoration: none;
+    opacity: 0.2;
+}
+
+.navbar > ul > li > a{
+    text-decoration: none;
+    display: block;
+    color: #FFF;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbarBrand > img{
+    z-index: 13;
+    height: 13.5vw;
+    margin-top: -3vw;
+    opacity: 0;
+}
+
+.VizBrand{
+    position: absolute;
+    z-index: 14;
+    height: 13.5vw;
+    left: 50%;
+    top: 1.8vw;
+    transform: translate(-50%,0);
+}
+
+.ModelsContent{
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: rgba(22,22,22,.4);
+    width: 100%;
+    height: 30vw;
+    z-index: 12;
+    padding: 0;
+    list-style: none;
+}
+
+.ModelsContent > li{
+    z-index: -1;
+    text-align: center;
+    width: 20%;
+    padding-top: 18vw;
+    display: inline-block;
+}
+
+.ModelsContent li a {
+    color: #FFF;
+}
+
+.ImageCarousel{
+    position: relative;
+    margin-top: -4vw;
+    width: 100%;
+    height: 55vw;
+}
+
+.ImageCarousel img{
+    position: absolute;
+    height: auto;
+    width: 100%;
+}
+
+.ImageCarousel ul{
+    list-style: none;
+}
+
+.ImageCarouselItems{
+    padding: 0;
+    margin: 0;
+}
+
+.ImageView img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.carouselContent{
+    padding-left: 0;
+}
+
+.animate-left{
+    position:relative;
+    animation:animateleft 0.4s
+}
+
+@keyframes animateleft{
+    from{left:-300px;opacity:0} to{left:0;opacity:1}
+}
+
+.turnContainer{
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    bottom: 20vw;
+    width: 100vw;
+    height: 10vw;
+    text-align: center;
+}
+
+.turnButtons{
+    position: absolute;
+    vertical-align: middle;
+    text-align: center;
+    width: 50vw;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding-left: 2.5vw;
+    list-style: none;
+    display: table;
+}
+
+.turnButtons li {
+    display: table-cell;
+    text-align: center;
+    height: auto;
+    width: 11vw;
+}
+
+.turnButtons li img{
+
+}
+
+#tsBtn{
+    width: 100%;
+}
+
+#rgtBtn{
+    width: 20%;
+}
+
+#leftBtn{
+    width: 20%;
+}
+
+.btnContainer{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.dirBtn{
+
+}
+
+.buttonBar{
+    position: absolute;
+    width: 100%;
+    height: 7.34vw;
+    bottom: 0;
+}
+
+.buttonBar > img {
+    bottom: 0;
+}
+
+.selectionGroup{
+    position: absolute;
+    vertical-align: middle;
+    width: 50vw;
+    top: 0;
+    left:0;
+    padding-left: 2.5vw;
+    list-style: none;
+    display: table;
+}
+
+.selectionGroup li{
+    display: table-cell;
+    height: auto;
+}
+
+.selectionGroup img{
+    width: 15vw;
+    height: auto;
+    display: block;
+}
+
+.selectionGroup img:hover{
+    cursor: pointer
+}
+
+.selectionButton{
+    border-color: #FFF;
+    border-width: 2px;
+}
+
+.colorGroup{
+    position: absolute;
+    vertical-align: middle;
+    width: 44vw;
+    top: 10%;
+    right:0;
+    padding-right: 2.5vw;
+    list-style: none;
+    display: table;
+}
+
+.colorGroup li{
+    display: table-cell;
+    height: auto;
+}
+
+.colorGroup img{
+    width: 4.5vw;
+    height: 4.5vw;
+    display: block;
+}
+
+.colorGroup img:hover{
+    cursor: pointer
+}
+
+.Section{
+    background-color: #444;
+    width: 100%;
+}
+
+.FeatureImages{
+    margin-top: 1vw;
+    opacity: 0;
+    /*-moz-transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;*/
+}
+
+.FeatureImages:hover{
+    /*-moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);*/
+}
+
+#section1{
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+#section1 > img{
+    float: right;
+    width: 69.42%;
+    height: auto;
+    right: 0;
+}
+
+#section2{
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255,0,0,0);
+}
+
+#section2 > img{
+    float: left;
+    width: 74.74%;
+    height: auto;
+    right: 0;
+}
+
+#section3{
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255,0,0,0);
+}
+
+#section3 > img{
+    float: right;
+    width: 81.69%;
+    height: auto;
+    right: 0;
+}
+
+.TriStateArea{
+    margin-top: -5.6vw;
+    position: relative;
+    height: 76.66vw;
+}
+
+#section4{
+    position: absolute;
+    background-color: rgba(255,0,0,0);
+}
+
+#section4 > img{
+    width: 84.58%;
+    float: right;
+    height: auto;
+}
+
+#section5{
+    position: absolute;
+    top: 51.3%;
+    background-color: rgba(255,0,0,0);
+}
+
+#section5 > img{
+    float: right;
+    width: 67.65%;
+    height: auto;
+    right: 0;
+}
+
+#section6{
+    position: absolute;
+    padding-left: .6vw;
+    top: 11.4%;
+    background-color: rgba(255,0,0,0);
+}
+
+#section6 > img{
+    width: 44.73%;
+    height: auto;
+}
+
+#section7{
+    position: relative;
+    background-color: rgba(255,0,0,0);
+    padding-top: 1.4vw;
+}
+
+#section7 > img{
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+#intro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 20;
+}
+
+#intro > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+}
+
+.BuildBoundary{
+    position: absolute;
+    top: 20vw;
+}
