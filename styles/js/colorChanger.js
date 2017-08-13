@@ -12,9 +12,9 @@ $("#BuildBtn").click(function() {
 });
 
 function start(){
-    $("#btnBody").css("box-shadow", "2px 2px rgba(255,255,255,0.3)");
-    $("#btnTrigger").css("box-shadow", "none");
-    $("#btnFlag").css("box-shadow", "none");
+    $("#btnBodyClicked").css("display", "block");
+    $("#btnTriggerClicked").css("display", "none");
+    $("#btnFlagClicked").css("display", "none");
     $("#flagLayer").css("display","none");
 }
 
@@ -22,26 +22,26 @@ function selectionClicked(item){
     switch (item) {
         case "bod":
             selection = "Body";
-            $("#btnBody").css("box-shadow", "2px 2px rgba(255,255,255,0.3)");
-            $("#btnTrigger").css("box-shadow", "none");
+            $("#btnBodyClicked").css("display", "block");
+            $("#btnTriggerClicked").css("display", "none");
             console.log("1");
             break;
         case "trigger":
             selection = "Trigger";
-            $("#btnTrigger").css("box-shadow", "2px 2px rgba(255,255,255,0.3)");
-            $("#btnBody").css("box-shadow", "none");
+            $("#btnBodyClicked").css("display", "none");
+            $("#btnTriggerClicked").css("display", "block");
             console.log("2");
             break;
         case "flag":
             if(flag){
                 flag = false;
-                $("#btnFlag").css("box-shadow", "none");
+                $("#btnFlagClicked").css("display", "none");
                 $("#flagLayer").css("display","none");
                 console.log(flag);
             }
             else{
                 flag = true;
-                $("#btnFlag").css("box-shadow", "2px 2px rgba(255,255,255,0.3)");
+                $("#btnFlagClicked").css("display", "block");
                 $("#flagLayer").css("display","inline-block");
                 console.log(flag);
             }
