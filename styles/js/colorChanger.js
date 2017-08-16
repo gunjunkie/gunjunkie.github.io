@@ -1,5 +1,7 @@
 var selection = "Body";
 var color = "orange";
+var bodColor = "orange";
+var triggerColor = "orange";
 var flag = false;
 
 start();
@@ -24,13 +26,11 @@ function selectionClicked(item){
             selection = "Body";
             $("#btnBodyClicked").css("display", "block");
             $("#btnTriggerClicked").css("display", "none");
-            console.log("1");
             break;
         case "trigger":
             selection = "Trigger";
             $("#btnBodyClicked").css("display", "none");
             $("#btnTriggerClicked").css("display", "block");
-            console.log("2");
             break;
         case "flag":
             if(flag){
@@ -85,11 +85,13 @@ function colorClicked(item){
             break;
     }
     update(selection, color);
+    // changeRedirect(bodColor,triggerColor);
 }
 
 function update(selection, color){
     if (selection == "Body"){
         bodyImages = document.getElementsByClassName("bodyLayer");
+        bodColor = color;
         for (i = 0; i < bodyImages.length; i++) {
             var angle = i+1;
             bodyImages[i].src = "images/colorimages/Body/"+angle.toString()+"/"+color+".jpg";
@@ -97,6 +99,7 @@ function update(selection, color){
     }
     else if (selection == "Trigger"){
         triggerImages = document.getElementsByClassName("TriggerLayer");
+        triggerColor = color;
         for (j = 0; j < triggerImages.length; j++) {
             var angle = j+1;
             triggerImages[j].src = "images/colorimages/Trigger/"+angle.toString()+"/"+color+".png";
@@ -134,12 +137,18 @@ function fadeIn(id,val){
        }
        else if (val == 10) {
            setTimeout('fadeIn("'+id+'",'+val+')',90);
-       }else{
+       }
+       else{
            document.getElementsByClassName(id)[0].style.opacity='1';
            document.getElementsByClassName(id)[0].style.filter='alpha(opacity=1)';
            document.getElementsByClassName(id)[1].style.opacity='1';
            document.getElementsByClassName(id)[1].style.filter='alpha(opacity=1)';
            document.getElementsByClassName(id)[2].style.opacity='1';
            document.getElementsByClassName(id)[2].style.filter='alpha(opacity=1)';
-           return;}
+           return;
+       }
 }
+
+// function changeRedirect(bodColor,triggerColor){
+//     document.getElementById("redirectLink").href = toString(bodColor)+toString(triggerColor)".html";
+// }
