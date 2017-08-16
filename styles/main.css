@@ -9,10 +9,14 @@ body{
 
 .fbbutton{
     position: absolute;
-    width: 5vw;
-    right: 4vw;
-    bottom: 10vw;
+    width: 10vw;
+    right: 8vw;
+    bottom: 14vw;
     z-index: 50;
+}
+
+.fbbutton:hover{
+    cursor: pointer;
 }
 
 iframe{
