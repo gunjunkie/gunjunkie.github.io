@@ -18,34 +18,43 @@
         <meta property="og:image" content="images\redirectPagesTiny\blue\blue.jpg" />
     </head>
     <body>
-        <script type="text/javascript">
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId            : '1536168246461810',
-              autoLogAppEvents : true,
-              xfbml            : true,
-              version          : 'v2.10'
-            });
-            FB.AppEvents.logPageView();
-          };
+        <script>
+            function init() {
+                FB.api(
+                  '/l214.animaux',
+                  {"fields":"fan_count"},
+                  function(response) {
+                    alert(response.fan_count);
+                  }
+                );
+            }
 
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+              FB.init({
+                appId      : '1536168246461810',
+                xfbml      : true,
+                version    : 'v2.5'
+              });
+
+              init();
+            };
+
+            (function(d, s, id){
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-        <div class="fb-share-button" data-href="http://www.gunjunkie.io/" data-layout="button_count"></div>
+        <script>
+        FB.api('https://graph.facebook.com/', 'post', {
+                    id: 'http://www.gunjunkie.io',
+                    scrape: true
+                }, function(response) {
+                    console.log('rescrape!',response);
+                });
+        </script>
         <div class="oneImg">
             <img class="oneImgContent" src="images\redirectPagesTiny\blue\blue.jpg"></img>
         </div>
