@@ -52,6 +52,8 @@ function selectionClicked(item){
 }
 
 function colorClicked(item){
+    console.log(bodColor);
+    console.log(triggerColor);
     switch (item) {
         case "gray":
             color = "gray";
@@ -85,7 +87,7 @@ function colorClicked(item){
             break;
     }
     update(selection, color);
-    // changeRedirect(bodColor,triggerColor);
+    changeRedirect(bodColor,triggerColor);
 }
 
 function update(selection, color){
@@ -149,6 +151,7 @@ function fadeIn(id,val){
        }
 }
 
-// function changeRedirect(bodColor,triggerColor){
-//     document.getElementById("redirectLink").href = toString(bodColor)+toString(triggerColor)".html";
-// }
+function changeRedirect(bodColor,triggerColor){
+    console.log(bodColor);
+    console.log(triggerColor);
+    document.getElementById("redirectLink").href = bodColor+triggerColor+".html";}
