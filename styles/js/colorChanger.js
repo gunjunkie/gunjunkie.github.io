@@ -4,6 +4,31 @@ var bodColor = "orange";
 var triggerColor = "orange";
 var flag = false;
 
+var modal = document.getElementById('buildModal');
+var btn = document.getElementById('btnSubmit');
+
+btn.onclick = function() {
+    document.getElementById("metaImg").content = "http://www.gunjunkie.io/images/redirectPagesTiny/"+bodColor+"/"+triggerColor+".jpg";
+    document.getElementById("modalImage").src = "images/redirectPagesTiny/"+bodColor+"/"+triggerColor+".jpg";
+    modal.style.display = "block";
+    $.post(
+    'https://graph.facebook.com',
+    {
+        id: 'http://www.gunjunkie.io',
+        scrape: true
+    },
+    function(response){
+       console.log(response);
+    }
+);
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 start();
 
 
@@ -154,4 +179,5 @@ function fadeIn(id,val){
 function changeRedirect(bodColor,triggerColor){
     console.log(bodColor);
     console.log(triggerColor);
-    document.getElementById("redirectLink").href = bodColor+triggerColor+".html";}
+    // document.getElementById("redirectLink").href = bodColor+triggerColor+".html";
+    }

@@ -425,6 +425,26 @@ iframe{
     height: auto;
 }
 
+.buildModal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 51;
+}
+
+.buildModal > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: auto;
+}
+
 .BuildBoundary{
     position: absolute;
     top: 20vw;
