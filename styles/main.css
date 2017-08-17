@@ -451,6 +451,7 @@ iframe{
 }
 
 .OneImg{
+    position: relative;
     width: 100%;
 }
 
@@ -458,19 +459,14 @@ iframe{
     width: 100%;
 }
 
-.fbbutton2{
-    width: 10%;
-    height: 10%;
+.btnHeader{
+    position: relative;
 }
 
-.backbtn{
-    position: absolute;
-    font-family: "gotham";
-    font-weight: bold;
-    right: 8vw;
-    color: #FFF;
-    text-decoration: none;
-    padding-top: 1vw;
+.fbbutton2{
+    width: 10vw;
+    margin-top: 2vw;
+    transform: translate(0, -50%);
 }
 
 #btnSubmit2{
@@ -484,4 +480,17 @@ iframe{
 
 #btnSubmit2:hover{
     cursor: pointer;
+}
+
+.backbtn{
+    position: absolute;
+    top: 0;
+    width: 8vw;
+    right: 5vw;
+    transform: translate(0, -50%);
+    z-index: 3;
+}
+
+.backbtn img{
+    width: 100%;
 }
