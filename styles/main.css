@@ -472,3 +472,16 @@ iframe{
     text-decoration: none;
     padding-top: 1vw;
 }
+
+#btnSubmit2{
+    position: absolute;
+    width: 15vw;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 52;
+}
+
+#btnSubmit2:hover{
+    cursor: pointer;
+}

@@ -6,6 +6,7 @@ var flag = false;
 
 var modal = document.getElementById('buildModal');
 var btn = document.getElementById('btnSubmit');
+var btn2 = document.getElementById('btnSubmit2');
 
 btn.onclick = function() {
     document.getElementById("metaImg").content = "http://www.gunjunkie.io/images/redirectPagesTiny/"+bodColor+"/"+triggerColor+".jpg";
@@ -179,5 +180,5 @@ function fadeIn(id,val){
 function changeRedirect(bodColor,triggerColor){
     console.log(bodColor);
     console.log(triggerColor);
-    // document.getElementById("redirectLink").href = bodColor+triggerColor+".html";
+    document.getElementById("redirectLink").href = bodColor+triggerColor+".html";
     }
