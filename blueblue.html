@@ -11,16 +11,43 @@
         <title>Vizioso</title>
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
         <link href="styles/main.css" rel="stylesheet">
-        <meta property="og:url"           content="http://www.gunjunkie.io" />
+        <meta property="og:url"           content="http://www.gunjunkie.io/blueblue" />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="Vizioso" />
         <meta property="og:description"   content="Vizioso - New sleek and shiny addition to the CS:GO workshop by GunJunkie." />
         <meta property="og:image" content="images\redirectPagesTiny\blue\blue.jpg" />
     </head>
     <body>
-        <div class="fbbutton2">
-            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.gunjunkie.io%2Fgrayorange.html&layout=button&size=large&mobile_iframe=true&width=74&height=28&appId" width="74" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
+        <script type="text/javascript">
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId            : '1536168246461810',
+              autoLogAppEvents : true,
+              xfbml            : true,
+              version          : 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-share-button" data-href="http://www.gunjunkie.io/" data-layout="button_count"></div>
         <div class="oneImg">
             <img class="oneImgContent" src="images\redirectPagesTiny\blue\blue.jpg"></img>
         </div>
     </body>
+    </html>

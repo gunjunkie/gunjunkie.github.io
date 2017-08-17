@@ -437,3 +437,18 @@ iframe{
 .OneImgContent{
     width: 100%;
 }
+
+.fbbutton2{
+    width: 10%;
+    height: 10%;
+}
+
+.backbtn{
+    position: absolute;
+    font-family: "gotham";
+    font-weight: bold;
+    right: 8vw;
+    color: #FFF;
+    text-decoration: none;
+    padding-top: 1vw;
+}
