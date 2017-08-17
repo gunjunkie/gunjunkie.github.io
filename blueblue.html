@@ -19,35 +19,23 @@
     </head>
     <body>
         <script>
-            function init() {
-                FB.api(
-                  '/l214.animaux',
-                  {"fields":"fan_count"},
-                  function(response) {
-                    alert(response.fan_count);
-                  }
-                );
-            }
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId            : 'your-app-id',
+              autoLogAppEvents : true,
+              xfbml            : true,
+              version          : 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+          };
 
-            window.fbAsyncInit = function() {
-              FB.init({
-                appId      : '1536168246461810',
-                xfbml      : true,
-                version    : 'v2.5'
-              });
-
-              init();
-            };
-
-            (function(d, s, id){
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) {return;}
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/en_US/sdk.js";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <script>
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
         FB.api('https://graph.facebook.com/', 'post', {
                     id: 'http://www.gunjunkie.io',
                     scrape: true
