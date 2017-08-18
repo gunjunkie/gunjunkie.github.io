@@ -206,6 +206,9 @@ iframe{
     left: 50%;
     transform: translate(-50%,0);
     width: 100%;
+    transition: .4s;
+    opacity: .3;
+
 }
 
 #tsBtn{
@@ -228,6 +231,7 @@ iframe{
 
 .dirBtn:hover{
     cursor: pointer;
+    opacity: .7;
 }
 
 .buttonBar{
