@@ -308,6 +308,35 @@ iframe{
     width: 100%;
 }
 
+.SectionTextbox{
+    font-family: 'gotham';
+    color: #999;
+    font-size: 1.3vw;
+}
+
+#text1{
+    position: absolute;
+    margin-left: 7vw;
+    margin-top: 7vw;
+    width: 33%;
+    height: 30vw;
+}
+
+#text2{
+    position: absolute;
+    right:0;
+    margin-right: 10vw;
+    margin-top: 28vw;
+    width: 32%;
+    height: 30vw;
+}
+
+.SectionTextbox h2 {
+    font-size: 1.8vw;
+    color: #FFF;
+    font-weight: 800;
+}
+
 .FeatureImages{
     margin-top: 1vw;
     opacity: 0;
