@@ -172,14 +172,14 @@ iframe{
     position: absolute;
     list-style-type: none;
     left: 50%;
-    transform: translate(-53%,10%);
+    transform: translate(-52.5%,10%);
     margin: 0;
     padding: 0;
     bottom: 6vw;
     width: 50vw;
     height: 10vw;
     text-align: center;
-    z-index: 999;
+    z-index: 10;
 }
 
 .turnButtons{
@@ -226,8 +226,8 @@ iframe{
     width: 100%;
 }
 
-.dirBtn{
-
+.dirBtn:hover{
+    cursor: pointer;
 }
 
 .buttonBar{
