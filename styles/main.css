@@ -318,7 +318,7 @@ iframe{
     position: absolute;
     margin-left: 7vw;
     margin-top: 7vw;
-    width: 33%;
+    width: 50%;
     height: 30vw;
 }
 
@@ -328,6 +328,25 @@ iframe{
     margin-right: 10vw;
     margin-top: 28vw;
     width: 32%;
+    height: 30vw;
+}
+
+#text3{
+    position: absolute;
+    margin-left: 7vw;
+    margin-top: 7vw;
+    margin-bottom: -2vw;
+    bottom: 0;
+    width: 50%;
+    height: 30vw;
+}
+
+#text4{
+    position: absolute;
+    margin-left: 7vw;
+    margin-top: 7vw;
+    top: -22vw;
+    width: 50%;
     height: 30vw;
 }
 
