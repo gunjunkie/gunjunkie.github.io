@@ -172,11 +172,11 @@ iframe{
     position: absolute;
     list-style-type: none;
     left: 50%;
-    transform: translate(-51%,0);
+    transform: translate(-53%,10%);
     margin: 0;
     padding: 0;
     bottom: 6vw;
-    width: 100vw;
+    width: 50vw;
     height: 10vw;
     text-align: center;
     z-index: 999;
